@@ -6,7 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C76EEBEE3039F5E200A2AA08 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76EEBDE3039F5E200A2AA08 /* APIClient.swift */; };
+		C76EEBEF3039F5E200A2AA08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76EEBD93039F5E200A2AA08 /* SceneDelegate.swift */; };
+		C76EEBF13039F5E200A2AA08 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76EEBDF3039F5E200A2AA08 /* APIError.swift */; };
+		C76EEBF33039F5E200A2AA08 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76EEBE03039F5E200A2AA08 /* Endpoint.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		C76EEBD83039F5E200A2AA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C76EEBD93039F5E200A2AA08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C76EEBDC3039F5E200A2AA08 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		C76EEBDE3039F5E200A2AA08 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C76EEBDF3039F5E200A2AA08 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		C76EEBE03039F5E200A2AA08 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C76EEBE13039F5E200A2AA08 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		C76EEBE43039F5E200A2AA08 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		C76EEBE53039F5E200A2AA08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C76EEBE63039F5E200A2AA08 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		C76EEBE73039F5E200A2AA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C76EEBE83039F5E200A2AA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C76EEBEA3039F5E200A2AA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C76EEBEC3039F5E200A2AA08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C7DD4C3230358139004D839C /* CineKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -14,7 +35,11 @@
 		C7DD4C443035813A004D839C /* Exceptions for "CineKit" folder in "CineKit" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Config.xcconfig,
 				Info.plist,
+				Networking/APIClient.swift,
+				Networking/APIError.swift,
+				Networking/Endpoint.swift,
 			);
 			target = C7DD4C3130358139004D839C /* CineKit */;
 		};
@@ -42,11 +67,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C76EEBDA3039F5E200A2AA08 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C76EEBD83039F5E200A2AA08 /* AppDelegate.swift */,
+				C76EEBD93039F5E200A2AA08 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C76EEBDB3039F5E200A2AA08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C76EEBDD3039F5E200A2AA08 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C76EEBDC3039F5E200A2AA08 /* ProductService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C76EEBE23039F5E200A2AA08 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C76EEBDD3039F5E200A2AA08 /* Services */,
+				C76EEBDE3039F5E200A2AA08 /* APIClient.swift */,
+				C76EEBDF3039F5E200A2AA08 /* APIError.swift */,
+				C76EEBE03039F5E200A2AA08 /* Endpoint.swift */,
+				C76EEBE13039F5E200A2AA08 /* ImageLoader.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C76EEBE33039F5E200A2AA08 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C76EEBED3039F5E200A2AA08 /* CineKit */ = {
+			isa = PBXGroup;
+			children = (
+				C76EEBDA3039F5E200A2AA08 /* AppDelegate */,
+				C76EEBDB3039F5E200A2AA08 /* Models */,
+				C76EEBE23039F5E200A2AA08 /* Networking */,
+				C76EEBE33039F5E200A2AA08 /* Scenes */,
+				C76EEBE43039F5E200A2AA08 /* APIConfig.swift */,
+				C76EEBE53039F5E200A2AA08 /* Assets.xcassets */,
+				C76EEBE63039F5E200A2AA08 /* Config.xcconfig */,
+				C76EEBE73039F5E200A2AA08 /* Info.plist */,
+				C76EEBE93039F5E200A2AA08 /* LaunchScreen.storyboard */,
+				C76EEBEB3039F5E200A2AA08 /* Main.storyboard */,
+				C76EEBEC3039F5E200A2AA08 /* ViewController.swift */,
+			);
+			path = CineKit;
+			sourceTree = "<group>";
+		};
 		C7DD4C2930358138004D839C = {
 			isa = PBXGroup;
 			children = (
 				C7DD4C3430358139004D839C /* CineKit */,
 				C7DD4C3330358139004D839C /* Products */,
+				C76EEBED3039F5E200A2AA08 /* CineKit */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,10 +219,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76EEBEE3039F5E200A2AA08 /* APIClient.swift in Sources */,
+				C76EEBEF3039F5E200A2AA08 /* SceneDelegate.swift in Sources */,
+				C76EEBF13039F5E200A2AA08 /* APIError.swift in Sources */,
+				C76EEBF33039F5E200A2AA08 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C76EEBE93039F5E200A2AA08 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C76EEBE83039F5E200A2AA08 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C76EEBEB3039F5E200A2AA08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C76EEBEA3039F5E200A2AA08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C7DD4C463035813A004D839C /* Debug */ = {
@@ -146,7 +256,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MM4DF5U4GK;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CineKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -178,7 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MM4DF5U4GK;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = CineKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -204,6 +314,7 @@
 		};
 		C7DD4C483035813A004D839C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C76EEBE63039F5E200A2AA08 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -268,6 +379,7 @@
 		};
 		C7DD4C493035813A004D839C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C76EEBE63039F5E200A2AA08 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

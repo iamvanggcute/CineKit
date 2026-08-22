@@ -1,4 +1,3 @@
-
 import Foundation
 
 final class APIClient {
@@ -16,7 +15,12 @@ final class APIClient {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("Bearer \(APIConfig.readAccessToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "accept")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
             
             if let error {
                 DispatchQueue.main.async {
@@ -54,4 +58,3 @@ final class APIClient {
         }.resume()
     }
 }
-
